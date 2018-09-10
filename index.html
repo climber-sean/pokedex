@@ -2,63 +2,79 @@
 <html>
     
     <head>
-      <title>Starter Pokemon</title>
-       <meta name="viewport" content="width=device-width, initial-scale=1">
-       <link rel="stylesheet" href="styles.css">
-       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <title>Kanto - Pokedex</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="styles.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     </head>
     
     <body>
-       <header>
-           <div class="container-header">
+        
+        <!-- Header Section -->
+        <header>
+            <div class="header container">
+               <div class="poke-ball">
+                   <div class="poke-ball-top-half"></div>
+                   <div class="poke-ball-middle"></div>
+                   <div class="poke-ball-bottom-half"></div>
+               </div>
                 <div class="header-title">
-                   <h1>Starter Pokemon</h1>
+                    <h1>Kanto-Pokedex</h1>
                 </div>
-           </div>
-       </header>
-       <div class="container">
-           <aside>
-              <div class="container-sidebar">
-                <div class="sidebar-content">
-                    <div class="sidebar-header">
-                          <h2>Pokemon</h2>
+                <div class="poke-ball">
+                   <div class="poke-ball-top-half"></div>
+                   <div class="poke-ball-middle"></div>
+                   <div class="poke-ball-bottom-half"></div>
+               </div>
+            </div>
+        </header>
+        
+        <main>
+           <!-- Navigation Section -->
+            <div class="pokemon-nav">
+                <div class="container">
+                    <div class="pokemon-nav-title">
+                        <h2>Select Pokemon:</h2>
                     </div>
-                    <div class="sidebar-list">
+                    <div class="pokemon-nav-list">
                         <ul class="poke-list">
+                            <!-- AJAX call to populate list -->
                         </ul>
                     </div>
-                  </div>
-              </div>
-           </aside>
-           <main>
-             <div class="container-main">
-               <div class="main-header">
-                <h2>Pokemon: <span class="pokemon-name">Squirtle</span></h2>
                 </div>
-                <div class="main-content">
-                    <div class="main-stats">
-                        <h3>Info</h3>
-                        <h4>Height: <span class="ability-height"></span></h4>
-                        <h4>Weight: <span class="ability-weight"></span></h4>
-                        <h4>Abilities:</h4>
+            </div>
+            <!-- Pokemon Information Section -->
+            <div class="pokedex-main">
+               <div class="container">
+                    <div class="pokedex-main-header">
+                        <h2>Name: <span class="pokemon-name"></span></h2>
+                    </div>
+                    <div class="pokdex-main-info">
+                        <h3>Height: <span class="ability-height"></span></h3>
+                        <h3>Weight: <span class="ability-weight"></span></h3>
+                        <h3>Abilities: </h3>
                         <ul class="ability-list">
-                            
+                            <!-- List populated by AJAX call -->
                         </ul>
-                        <h4>Base Experience: <span class="ability-exp"></span></h4>
-                        <h4>Base Stats:</h4>
+                        <h3>Base Experience: <span class="ability-exp"></span></h3>
+                        <h3>Base Stats: </h3>
                         <ul class="stat-list">
-                            
+                            <!-- List populated by AJAX call -->
                         </ul>
-                    </div>
-                    <div class="main-sprite">
-                        
+                        <div class="main-sprite">
+                           <div class="main-sprite-header">
+                               <h3>Sprites:</h3>
+                           </div>
+                           <div class="sprite-container">
+                               <!-- Container for the pokemon sprite -->
+                           </div>
+                        </div>
                     </div>
                 </div>
-             </div>  
-           </main>
-       </div>
+            </div>
+        </main>
         
         <script src="jquery.js"></script>
     </body>
-    
 </html>

@@ -36,8 +36,8 @@ $(document).ready(function() {
                         success: function(response) {
                             console.log(response);
                             $(".pokemon-name").text(response.name);
-                            $(".ability-height").text(response.height);
-                            $(".ability-weight").text(response.weight);
+                            $(".ability-height").text(response.height + "cm");
+                            $(".ability-weight").text(response.weight / 10 + "kg");
                             
                             $(response.abilities).each(function() {
                                 var name = this.ability.name;
@@ -46,7 +46,7 @@ $(document).ready(function() {
                                 $(".ability-list").append(ele);
                             });
                             
-                            $(".ability-exp").text(response.base_experience);
+                            $(".ability-exp").text(response.base_experience + "xp");
                             
                             $(response.stats).each(function() {
                                 var name = this.stat.name;
@@ -58,7 +58,7 @@ $(document).ready(function() {
                             
                             var ele = $("<img />").addClass("poke-sprite").attr("src", response.sprites.front_default);
                             var ele2 = $("<img />").addClass("poke-sprite").attr("src", response.sprites.back_default);
-                            $(".main-sprite").append(ele).append(ele2);
+                            $(".sprite-container").append(ele).append(ele2);
                         },
                         error: function() {
                             console.log("error");
