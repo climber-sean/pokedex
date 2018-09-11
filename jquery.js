@@ -36,7 +36,7 @@ $(document).ready(function() {
                         success: function(response) {
                             console.log(response);
                             $(".pokemon-name").text(response.name);
-                            $(".ability-height").text(response.height + "cm");
+                            $(".ability-height").text(response.height * 10 + "cm");
                             $(".ability-weight").text(response.weight / 10 + "kg");
                             
                             $(response.abilities).each(function() {
