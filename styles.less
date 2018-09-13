@@ -132,6 +132,7 @@ h2 {
         margin: 0;
         font-size: 1.5em;
         background-color: lightgrey;
+        cursor: pointer;
     }
 }
 
@@ -149,7 +150,29 @@ h2 {
 .pokedex-main-header {
     h2 {
         margin-bottom: 5px;
+        cursor: pointer;
     }
+
+    h2:hover::before {
+        content: '\25B6';
+        display: inline-block;
+        font-size: 0.5em;
+        margin-right: 5px;
+    }
+}
+
+.pokedex-main-info {
+    h3 {
+        cursor: pointer;
+    }
+
+    h3:hover::before {
+        content: '\25B6';
+        display: inline-block;
+        font-size: 0.5em;
+        margin-right: 5px;
+    }
+    
 }
 
 .ability-list, .stat-list {
